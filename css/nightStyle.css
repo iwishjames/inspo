@@ -1,0 +1,15 @@
+/* Nighttime Theme */
+
+body {
+  background-color: #1a1a1c;
+  color: #eee;
+}
+
+h1 {
+background-color: #1a1a1c;
+}
+
+h1 a {
+    color: #eee !important;
+    text-decoration: none;
+}
