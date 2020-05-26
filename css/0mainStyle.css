@@ -89,6 +89,24 @@ h3 {
 }
 
 
+.dotCenterIndex {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+}
+
+.dot{
+  height: 5px;
+  width: 5px;
+  margin: 0 2px;
+  padding: 0;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
 /* --- THINGS RELATED TO THE FOOTER --- */
 
 footer {
