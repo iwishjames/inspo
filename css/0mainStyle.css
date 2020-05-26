@@ -78,6 +78,17 @@ h3 {
 }
 
 
+.scrollContainer {
+  overflow: auto;
+  white-space: nowrap;
+  width: 896px;
+}
+
+.scrollCard {
+  display: inline-block;
+}
+
+
 /* --- THINGS RELATED TO THE FOOTER --- */
 
 footer {
