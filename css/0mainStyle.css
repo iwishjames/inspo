@@ -69,6 +69,7 @@ h3 {
   background-color: #35353d;
   padding: 0.5em;
   border-radius: 0.2em;
+  margin-top: 2em;
 }
 
 .imageContraints {
@@ -97,9 +98,9 @@ h3 {
 }
 
 .dot{
-  height: 5px;
-  width: 5px;
-  margin: 0 2px;
+  height: 0.4em;
+  width: 0.4em;
+  margin: 0 0.25em;
   padding: 0;
   background-color: grey;
   border-radius: 50%;
