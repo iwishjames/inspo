@@ -10,11 +10,18 @@
 
   <body>
       <div class=contentContainter>
-        <h1><a href="" onclick="colorMode(); return false">Inspo<span class="theDot">:</span></a></h1>
+        <h1>
+          <a href="" onclick="colorMode(); return false">Inspo<span class="theDot">:</span>
+          </a>
+        </h1>
 
         <br />
         <br />
         <br />
+
+        <div class="item">
+          <span><a href="submit.html" target="_blank">Make a Submission</a></span>
+        </div>
 
         <div class="item">
           <iframe src="https://player.vimeo.com/video/289938607?playsinline=0&byline=0&transparent=0&portrait=0" width="896" height="504" frameborder="0" allowfullscreen></iframe>
@@ -112,5 +119,30 @@
 
         <footer></footer>
       </div>
+
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBKPCP6yfdWnjD39PEjkOXoKzDAujlkdxU",
+          authDomain: "inspo-82b56.firebaseapp.com",
+          databaseURL: "https://inspo-82b56.firebaseio.com",
+          projectId: "inspo-82b56",
+          storageBucket: "inspo-82b56.appspot.com",
+          messagingSenderId: "595193160511",
+          appId: "1:595193160511:web:fc8b949d1625b636ff698a",
+          measurementId: "G-KZCS9NDN3K"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
   </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Inspo - Submit Content to Inspire Creatives</title>
+    <link rel="stylesheet" href="css/0mainStyle.css">
+    <link id="pageTheme" rel="stylesheet" href="">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+
+  <div class=contentContainter>
+    <h1>
+      <a href="" onclick="colorMode(); return false">Inspo<span class="theDot">:</span>
+      </a>
+    </h1>
+
+    <br />
+    <br />
+
+    <div class="item">
+      <select onchange="isVideo()" id="contentType">
+        <option value="image">Image</option>
+        <option value="video">Video</option>
+      </select>
+
+      <div id="videoType" style="display : none">
+        <input id="videoURL" placeholder="youtube or vimeo url"></input>
+      </div>
+
+      <br></br>
+      <button onclick="submitClick()" id="submitBtn">Submit</button>
+    </div>
+
+    <div id="youtubePreview" class="item" style="display : none">
+       <h3>Preview:</h3>
+       <iframe id="youtubeSrc" src="" width="896" height="504" frameborder="0" allowfullscreen></iframe>
+       <div>
+         <h3>Video Title</h3>
+         <p class="itemAuthor">by <a href="https://www.youtube.com/channel/UCP7jMXSY2xbc3KCAE0MHQ-A" target="_blank">Creator</a></p>
+       </div>
+       <!-- <p><span class="hashtags">video</span> <span class="hashtags">Inspiration</span></p> -->
+     </div>
+
+     <div id="vimeoPreview" class="item" style="display : none">
+        <h3>Preview:</h3>
+        <iframe id="vimeoSrc" src="" width="896" height="504" frameborder="0" allowfullscreen></iframe>
+        <div>
+          <h3>Video Title</h3>
+          <p class="itemAuthor">by <a href="https://www.youtube.com/channel/UCP7jMXSY2xbc3KCAE0MHQ-A" target="_blank">Creator</a></p>
+        </div>
+        <!-- <p><span class="hashtags">video</span> <span class="hashtags">Inspiration</span></p> -->
+      </div>
+   </div>
+
+  <!-- <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBKPCP6yfdWnjD39PEjkOXoKzDAujlkdxU",
+      authDomain: "inspo-82b56.firebaseapp.com",
+      databaseURL: "https://inspo-82b56.firebaseio.com",
+      projectId: "inspo-82b56",
+      storageBucket: "inspo-82b56.appspot.com",
+      messagingSenderId: "595193160511",
+      appId: "1:595193160511:web:fc8b949d1625b636ff698a",
+      measurementId: "G-KZCS9NDN3K"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script> -->
+
+  <script src="js/form.js"></script>
+
+  </body>
+</html>
