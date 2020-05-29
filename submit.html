@@ -5,7 +5,7 @@
     <title>Inspo - Submit Content to Inspire Creatives</title>
     <link rel="stylesheet" href="css/0mainStyle.css">
     <link id="pageTheme" rel="stylesheet" href="">
-    <script src="js/index.js"></script>
+    <script src="js/pageTheme.js"></script>
   </head>
   <body>
 
@@ -19,38 +19,73 @@
     <br />
 
     <div class="item">
-      <select onchange="isVideo()" id="contentType">
+      <select onchange="isGallery()" id="contentType">
         <option value="image">Image</option>
         <option value="video">Video</option>
       </select>
 
-      <div id="videoType" style="display : none">
-        <input id="videoURL" placeholder="Youtube or Vimeo URL"></input>
-      </div>
+        <input id="mediaURL" placeholder="Media URL"></input>
+        <button id="imgAddBtn">_+_</button>
+
+      <br></br>
+      <br></br>
+
+      <input id="userName" placeholder="Your Name"></input>
+      <input id="userURL" placeholder="[Optional] Your URL"></input>
 
       <br></br>
       <button onclick="submitClick()" id="submitBtn">Submit</button>
     </div>
 
-    <div id="youtubePreview" class="item" style="display : none">
+    <div id="videoPreview" class="item" style="display : none">
        <h3>Preview:</h3>
-       <iframe id="youtubeSrc" src="" width="896" height="504" frameborder="0" allowfullscreen></iframe>
        <div>
-         <h3>Video Title</h3>
-         <p class="itemAuthor">by <a href="https://www.youtube.com/channel/UCP7jMXSY2xbc3KCAE0MHQ-A" target="_blank">Creator</a></p>
+       <iframe id="videoSrc" src="" width="896" height="504" frameborder="0" allowfullscreen></iframe>
+      </div>
+       <div id="submitterContainer">
+         <p class="itemAuthor">via
+           <a id="theURL" href="" target="_blank">
+             <span id="theName"></span>
+           </a>
+         </p>
        </div>
-       <!-- <p><span class="hashtags">video</span> <span class="hashtags">Inspiration</span></p> -->
      </div>
 
-     <div id="vimeoPreview" class="item" style="display : none">
+     <div id="imagePreview" class="item" style="display : none">
         <h3>Preview:</h3>
-        <iframe id="vimeoSrc" src="" width="896" height="504" frameborder="0" allowfullscreen></iframe>
         <div>
-          <h3>Video Title</h3>
-          <p class="itemAuthor">by <a href="https://www.youtube.com/channel/UCP7jMXSY2xbc3KCAE0MHQ-A" target="_blank">Creator</a></p>
+        <iframe id="videoSrc" src="" width="896" height="504" frameborder="0" allowfullscreen></iframe>
+       </div>
+        <div id="submitterContainer">
+          <p class="itemAuthor">via
+            <a id="theURL" href="" target="_blank">
+              <span id="theName"></span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="item">
+        <div class="scrollContainer">
+          <a href="https://paulchadeisson.com/projects/k4gL9A" target="_blank">
+            <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/665/large/paul-chadeisson-testspeed-0304a.jpg?1588857288" alt="concept art of plane carrier">
+            <!-- <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/675/large/paul-chadeisson-testspeed-0304d.jpg?1588857117" alt="concept art of plane carrier">
+            <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/671/large/paul-chadeisson-testspeed-0304c.jpg?1588857110" alt="concept art of plane carrier">
+            <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/683/large/paul-chadeisson-testspeed-0304f.jpg?1588857129" alt="concept art of plane carrier"> -->
+          </a>
+        </div>
+        <div class="dotCenterIndex">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div>
+          <p class="itemAuthor">via <a href="https://paulchadeisson.com/projects" target="_blank">Paul Chadeisson</a></p>
         </div>
         <!-- <p><span class="hashtags">video</span> <span class="hashtags">Inspiration</span></p> -->
       </div>
+
    </div>
 
   <!-- <script>
@@ -70,7 +105,7 @@
     firebase.analytics();
   </script> -->
 
-  <script src="js/form.js"></script>
+  <script src="js/submitForm.js"></script>
 
   </body>
 </html>
