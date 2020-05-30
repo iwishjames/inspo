@@ -20,15 +20,24 @@
 
     <div class="item">
       <select onchange="isGallery()" id="contentType">
-        <option value="image">Image</option>
         <option value="video">Video</option>
+        <option value="image">Image</option>
       </select>
-
-        <input id="mediaURL" placeholder="Media URL"></input>
-        <button id="imgAddBtn">_+_</button>
+      <span id="btnContainer" style="display : none">
+        <button id="imgSubBtn" onclick="lessImgLinks()" >_-_</button>
+        <button id="imgAddBtn" onclick="moreImgLinks()" >_+_</button>
+      </span>
 
       <br></br>
+        <input id="mediaURL" placeholder="Youtube or Vimeo URL"></input>
+        <span id="URLcontainer">
+
+        </span>
       <br></br>
+        <input id="sourceURL" placeholder="URL to Original Source" style="display : none"></input>
+      <br></br>
+      <br></br>
+      
 
       <input id="userName" placeholder="Your Name"></input>
       <input id="userURL" placeholder="[Optional] Your URL"></input>
@@ -54,11 +63,11 @@
      <div id="imagePreview" class="item" style="display : none">
         <h3>Preview:</h3>
         <div>
-        <iframe id="videoSrc" src="" width="896" height="504" frameborder="0" allowfullscreen></iframe>
+        <iframe id="videoSrc" src="https://cdnb.artstation.com/p/assets/images/images/026/466/665/large/paul-chadeisson-testspeed-0304a.jpg?1588857288" width="896" height="504" frameborder="0" allowfullscreen></iframe>
        </div>
         <div id="submitterContainer">
           <p class="itemAuthor">via
-            <a id="theURL" href="" target="_blank">
+            <a id="theURL" href="https://paulchadeisson.com/projects/k4gL9A" target="_blank">
               <span id="theName"></span>
             </a>
           </p>
@@ -69,13 +78,13 @@
       <div class="item">
         <div class="scrollContainer">
           <a href="https://paulchadeisson.com/projects/k4gL9A" target="_blank">
-            <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/665/large/paul-chadeisson-testspeed-0304a.jpg?1588857288" alt="concept art of plane carrier">
+            <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/665/large/paul-chadeisson-testspeed-0304a.jpg?1588857288">
             <!-- <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/675/large/paul-chadeisson-testspeed-0304d.jpg?1588857117" alt="concept art of plane carrier">
             <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/671/large/paul-chadeisson-testspeed-0304c.jpg?1588857110" alt="concept art of plane carrier">
             <img class="imageContraints scrollCard" src="https://cdnb.artstation.com/p/assets/images/images/026/466/683/large/paul-chadeisson-testspeed-0304f.jpg?1588857129" alt="concept art of plane carrier"> -->
           </a>
         </div>
-        <div class="dotCenterIndex">
+        <div id="galleryDots" class="dotCenterIndex">
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>

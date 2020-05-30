@@ -7,3 +7,7 @@ function isVideo() {
     document.getElementById("mediaURL").removeAttribute("style");
   }
 }
+
+
+// btn to add existing onclick function.
+    btn.onclick = function() { moreImgLinks() };
