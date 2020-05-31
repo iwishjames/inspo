@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FireBase Testing</title>
+
+    <link rel="stylesheet" href="css/testing.css">
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+  </head>
+  <body>
+    <div>
+      <h3>Input</h3>
+      <select id="mediaType">
+        <option value="video">video</option>
+        <option value="image">image</option>
+      </select>
+      <input id="theURL" placeholder="image url"></input>
+      <button id="submitBtn" onclick="submitClick()">Submit</button>
+    </div>
+
+    <br>
+
+    <div>
+      <button id="refreshBtn" onclick="getData()">Get Data</button>
+    </div>
+
+    <div id="mediaContainer">
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBKPCP6yfdWnjD39PEjkOXoKzDAujlkdxU",
+        authDomain: "inspo-82b56.firebaseapp.com",
+        databaseURL: "https://inspo-82b56.firebaseio.com",
+        projectId: "inspo-82b56",
+        storageBucket: "inspo-82b56.appspot.com",
+        messagingSenderId: "595193160511",
+        appId: "1:595193160511:web:fc8b949d1625b636ff698a",
+        measurementId: "G-KZCS9NDN3K"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <script src="js/firebaseTest.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,9 @@
+body {
+  font-family: Helvetica;
+}
+
+img {
+  width: 896px;
+  height: 504px;
+  object-fit: cover;
+}
