@@ -17,7 +17,6 @@ function isGallery() {
 
 // a counter to limit the amount of images posted.
 let btnCounter = 0;
-let galleryLimitReached = 0;
 
 // Add Button for increasing amount of URL input boxes.
 function moreImgLinks() {
@@ -29,7 +28,6 @@ function moreImgLinks() {
     newInput.id = `mediaURL${btnCounter}`;
     document.getElementById("URLcontainer").appendChild(newInput);
     btnCounter ++;
-    galleryLimitReached = 0
 
   } else {
     window.alert("Woah, woah! Maximum is 6 images.");
@@ -41,7 +39,6 @@ function lessImgLinks() {
   let lastInput = document.getElementById(`mediaURL${btnCounter-1}`);
   document.getElementById("URLcontainer").removeChild(lastInput);
   btnCounter --;
-  galleryLimitReached = -1
 }
 
 
@@ -88,33 +85,26 @@ if (document.getElementById("contentType").value == "video") {
       document.getElementById("sourceReference").href = sourceURL;
       document.getElementById("imgReference").src = mediaURL;
 
-      if (galleryLimitReached == 0) {
-        for (let i = 0; i < btnCounter; i++) {
-          let imgElement = document.createElement("IMG");
-          imgElement.className = "imageContraints scrollCard";
-          imgElement.src = document.getElementById(`mediaURL${i}`).value;
-          imgElement.id = `galleryImages${i}`
-          document.getElementById("scrollerContainer").appendChild(imgElement);
-        }
-        galleryLimitReached = 1;
+// Removeing the old contaier of gallery, so as a new container is created every time. Removes the bug of having duplicate images in the gallery!
 
-      } else if (galleryLimitReached == -1) {
-        let lastImg = document.getElementById(`galleryImages${btnCounter}`);
-        document.getElementById("scrollerContainer").removeChild(lastImg);
-        galleryLimitReached = 0;
+      let removContainer = document.getElementById("scrollerContainer");
+      removContainer.remove();
+
+      let newContainer = document.createElement("SPAN");
+      newContainer.id = "scrollerContainer";
+      document.getElementById("sourceReference").appendChild(newContainer)
+
+      for (let i = 0; i < btnCounter; i++) {
+        let imgElement = document.createElement("IMG");
+        imgElement.className = "imageContraints scrollCard";
+        imgElement.src = document.getElementById(`mediaURL${i}`).value;
+        imgElement.id = `galleryImages${i}`
+        document.getElementById("scrollerContainer").appendChild(imgElement);
       }
   }
 
 
-/* llook at fixing the issue of images not changing once url is changed and submit is clicked. This is due to the thing that when clicked the gallery limit is set to 1 and it does it change.
-The opposite issue is that when you leave it open, the loop keeps adding way more images! */
-
-
-
-
-
-
-  // to display the preview container with the content.
+  // to display the preview container with the content. - we are removing the hide styling. 
   document.getElementById("previewContainer").removeAttribute("style");
 
 

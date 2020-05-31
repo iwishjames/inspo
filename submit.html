@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Inspo - Submit Content to Inspire Creatives</title>
     <link rel="stylesheet" href="css/0mainStyle.css">
+    <link rel="stylesheet" href="css/submit.css">
     <link id="pageTheme" rel="stylesheet" href="">
     <script src="js/pageTheme.js"></script>
   </head>
@@ -18,14 +19,14 @@
     <br />
     <br />
 
-    <div class="item">
+    <div class="item ">
       <select onchange="isGallery()" id="contentType">
         <option value="video">Video</option>
         <option value="image">Image</option>
       </select>
       <span id="btnContainer" style="display : none">
-        <button id="imgSubBtn" onclick="lessImgLinks()" >_-_</button>
-        <button id="imgAddBtn" onclick="moreImgLinks()" >_+_</button>
+        <button id="imgSubBtn" onclick="lessImgLinks()" >Less</button>
+        <button id="imgAddBtn" onclick="moreImgLinks()" >More</button>
       </span>
 
       <br></br>
@@ -43,7 +44,7 @@
       <input id="userURL" placeholder="[Optional] Your URL"></input>
 
       <br></br>
-      <button onclick="submitClick()" id="submitBtn">Submit</button>
+      <button onclick="submitClick()" id="submitBtn">Preview Submission</button>
     </div>
 
 
@@ -52,12 +53,12 @@
     <div id="previewContainer" class="item" style="display : none">
        <h3>Preview:</h3>
     <!-- preview div for video content  -->
-       <div id="videoPreview" style="display : none">
+       <div id="videoPreview" class="previewItem" style="display : none">
        <iframe id="videoSrc" src="" width="896" height="504" frameborder="0" allowfullscreen></iframe>
      </div>
 
     <!-- preview div for image content  -->
-      <div id="imagePreview" class="item" style="display : none">
+      <div id="imagePreview" class="previewItem" style="display : none">
         <div class="scrollContainer">
           <a id="sourceReference" href="" target="_blank">
             <img id="imgReference" class="imageContraints scrollCard" src="">
@@ -84,7 +85,7 @@
        </div>
 
      </div>
-
+      <footer></footer>
   </div>
 
   <!-- <script>
